@@ -1,11 +1,14 @@
-# class Solution(object):
-#     def isPalindrome(self, x):
-#         for i in len(x):
-#             if x[i]!= x[-i]:
-#                 return False
-            
-# d=125521
-# r=d[::-1]
-# if d[1]==r[1]:
-#     print(True)
-
+class Solution(object):
+    def isPalindrome(self, x):
+        s=str(x)
+        rev=s[::-1]
+        l=len(s)
+        counter=0
+        for _ in range(0,l):
+                if s[_]==rev[_]:
+                        counter+=1
+                else:
+                        return False
+        if counter==l:
+ 
+                return True
